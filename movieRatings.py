@@ -1,12 +1,12 @@
 import requests
 
-url = "https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1"
+url = "https://streaming-availability.p.rapidapi.com/v2/services"
 
 headers = {
-    "accept": "application/json",
-    "Authorization": "Bearer Madagascar 2"
+	"X-RapidAPI-Key": "b91daa5fb6msha897dfb06b2473bp1098c0jsnf65794ed3609",
+	"X-RapidAPI-Host": "streaming-availability.p.rapidapi.com"
 }
 
 response = requests.get(url, headers=headers)
 
-print(response.text)
+print(response.json())
